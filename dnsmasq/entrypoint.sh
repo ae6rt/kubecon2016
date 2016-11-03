@@ -4,7 +4,7 @@ set -uxe
  
 env | sort
  
-CURL_OPTS="curl -s --retry 5 --retry-delay 5 --insecure"
+CURL_OPTS="-s --retry 5 --retry-delay 5"
 TOKEN=$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)
 NAMESPACE=$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace)
 
